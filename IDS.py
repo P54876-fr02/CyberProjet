@@ -29,4 +29,6 @@ def packet_callback(packet):
                     block_ip(src_ip)
                     return
 
-sniff(filter="tcp and ip", prn=packet_callback)
+sniff(filter="port 80", prn=packet_callback, iface="ens33", store=False)
+~
+~
