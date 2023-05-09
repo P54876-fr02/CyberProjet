@@ -258,16 +258,8 @@ body .register_container .rows .LoginLink a {
   color: #fff;
   margin: 1rem 0;
 }
-h3.h3 {
-  font-size: 4rem;
-  margin: 1rem 0;
-}
 .dashboard .logOutBtn {
   cursor: pointer;
-}
-
-.logOutBtn {
-  top: 20px;
 }
 .dashboard .logOutBtn:hover a {
   background: var(--blackColor);
@@ -279,4 +271,19 @@ h3.h3 {
   background: #fff;
   border-radius: 10%;
   font-weight: 700;
+}
+
+.success {
+  text-align: center;
+  padding: 10px 20px;
+  background: var(--successColor);
+  color: var(--blackColor);
+  margin-bottom: 1rem;
+}
+
+.fail {
+  position: relative;
+  z-index: 1000;
+  color: var(--failureColor);
+  top: -7%;
 }/*# sourceMappingURL=main.css.map */
