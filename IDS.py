@@ -3,6 +3,10 @@ from scapy.all import *
 
 blocked_ips = {}
 
+max_request = 3
+
+count = 0
+
 def block_ip(ip_address):
     print("Blocking IP : " + ip_address)
     blocked_ips[ip_address] = time.time()
@@ -30,5 +34,4 @@ def packet_callback(packet):
                     return
 
 sniff(filter="port 80", prn=packet_callback, iface="ens33", store=False)
-~
-~
+
