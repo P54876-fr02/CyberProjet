@@ -22,7 +22,13 @@
                     header('Location: ./dashboard.php');
                     
                 }
+            }else{
+                header('HTTP/1.1 401 Unauthorized');
+                error_log($_SERVER['REMOTE_ADDR'] . ' - ' . date('Y-m-d H:i:s') . ' - ' . $_SERVER['REQUEST_URI'] . ' - Connexion échouée: Nom d\'utilisateur ou mot de passe incorrect' . "\n", 3, 'access.log');
             }
+        } else{
+            header('HTTP/1.1 401 Unauthorized');
+            error_log($_SERVER['REMOTE_ADDR'] . ' - ' . date('Y-m-d H:i:s') . ' - ' . $_SERVER['REQUEST_URI'] . ' - Connexion échouée: Nom d\'utilisateur ou mot de passe incorrect' . "\n", 3, 'access.log');
         }
     }
 ?>
