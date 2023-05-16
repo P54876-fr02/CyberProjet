@@ -5,7 +5,7 @@ blocked_ips = {}
 
 max_request = 3
 
-count = 0
+count = 2
 
 #permet de bloquer l'ip suspecté
 def block_ip(ip_address):
